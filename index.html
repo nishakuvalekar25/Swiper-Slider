@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+
+
+  <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+</head>
+<body>
+ 
+<!-- start of hero -->
+<section class="hero-slider hero-style">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-inner slide-bg-image" data-background="https://source.unsplash.com/1Z2niiBPg5A">
+          <div class="container">
+            <div data-swiper-parallax="300" class="slide-title">
+              <h2>GUITAR CLASSES
+FOR KIDS</h2>
+            </div>
+            <div data-swiper-parallax="400" class="slide-text">
+              <p>Want to see your kid become more expressive?</p>
+            </div>
+            <div class="clearfix"></div>
+            <div data-swiper-parallax="500" class="slide-btns">
+              <a href="#" class="theme-btn-s2">Register now</a>
+              <a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- end slide-inner -->
+      </div>
+      <!-- end swiper-slide -->
+
+
+
+      <div class="swiper-slide">
+        <div class="slide-inner slide-bg-image" data-background="https://source.unsplash.com/N7-wxyaIxFs">
+          <div class="container">
+            <div data-swiper-parallax="300" class="slide-title">
+              <h2>GUITAR CLASSES
+FOR KIDS</h2>
+            </div>
+            <div data-swiper-parallax="400" class="slide-text">
+              <p>Want to see your kid become more expressive?</p>
+            </div>
+            <div class="clearfix"></div>
+            <div data-swiper-parallax="500" class="slide-btns">
+              <a href="#" class="theme-btn-s2">Register now</a>
+              <a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- end slide-inner -->
+      </div>
+      <!-- end swiper-slide -->
+
+
+
+
+      <div class="swiper-slide">
+        <div class="slide-inner slide-bg-image" data-background="https://source.unsplash.com/4miBe6zg5r0">
+          <div class="container">
+            <div data-swiper-parallax="300" class="slide-title">
+              <h2>GUITAR CLASSES
+FOR KIDS</h2>
+            </div>
+            <div data-swiper-parallax="400" class="slide-text">
+              <p>Want to see your kid become more expressive?</p>
+            </div>
+            <div class="clearfix"></div>
+            <div data-swiper-parallax="500" class="slide-btns">
+              <a href="#" class="theme-btn-s2">Register now</a>
+              <a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- end slide-inner -->
+      </div>
+      <!-- end swiper-slide -->
+
+
+
+
+      <div class="swiper-slide">
+        <div class="slide-inner slide-bg-image" data-background="https://source.unsplash.com/B5drkS_Z5RM">
+          <div class="container">
+            <div data-swiper-parallax="300" class="slide-title">
+              <h2>GUITAR CLASSES
+FOR KIDS</h2>
+            </div>
+            <div data-swiper-parallax="400" class="slide-text">
+              <p>Want to see your kid become more expressive?</p>
+            </div>
+            <div class="clearfix"></div>
+            <div data-swiper-parallax="500" class="slide-btns">
+              <a href="#" class="theme-btn-s2">Register now</a>
+              <a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- end slide-inner -->
+      </div>
+      <!-- end swiper-slide -->
+    </div>
+    <!-- end swiper-wrapper -->
+
+    <!-- swipper controls -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+<!-- end of hero slider -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    speed: 1000,
+    parallax: true,
+    autoplay: {
+      delay: 6500,
+      disableOnInteraction: false,
+    },
+    watchSlidesProgress: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      init: function () {
+        // Set background image for the initial slide on page load
+        var initialSlide = this.slides[this.activeIndex];
+        var backgroundUrl = $(initialSlide).find('.slide-inner').data('background');
+        $(initialSlide).find('.slide-inner').css('background-image', 'url(' + backgroundUrl + ')');
+      },
+      slideChange: function () {
+        // Set background image for the current slide during slide transition
+        var currentSlide = this.slides[this.activeIndex];
+        var backgroundUrl = $(currentSlide).find('.slide-inner').data('background');
+        $(currentSlide).find('.slide-inner').css('background-image', 'url(' + backgroundUrl + ')');
+      },
+    },
+  });
+</script>
+
+</body>
+</html>
